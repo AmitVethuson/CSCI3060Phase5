@@ -7,3 +7,6 @@ To run:\
  &nbsp;&nbsp;&nbsp;&nbsp;-The path to the master bank accounts file must be written first, followed by the path to the merged transactions file\
  &nbsp;&nbsp;&nbsp;&nbsp;-e.g. "input/oldMasterBankAccounts.txt input/mergedBankAccountTransaction.txt"\
  -Run using intellij
+
+Test files:\
+ The test files are located in the directory /Tests/sample. This directory has the JUnit tests and the results.
