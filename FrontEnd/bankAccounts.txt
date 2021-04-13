@@ -1,0 +1,5 @@
+John Doe,Password123,10001,10000.00,Standard,NP,A
+Jane Doe,123Password,10002,01000.00,Standard,SP,A
+John Smith,Password456,10003,00050.00,Standard,NP,A
+Jane Smith,456Password,10004,-1000.00,Standard,SP,A
+Admin1,Admin123,10000,01000.00,Admin,SP,A

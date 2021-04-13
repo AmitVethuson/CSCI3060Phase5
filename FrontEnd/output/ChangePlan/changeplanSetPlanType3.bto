@@ -1,0 +1,10 @@
+Select Session Type: Admin or Standard
+Enter Account Number
+Enter Account Password
+Login Successful
+Account Name: 
+Account Number: 
+Change payment Plan: 
+Type 'SP' for Student Payment Plan
+Type 'NP' for Non-Student Payment Plan
+Error: Incorrect payment plan

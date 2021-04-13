@@ -1,0 +1,17 @@
+Select Session Type: Admin or Standard 
+Enter Account Number 
+Enter Account Password 
+Login Successful 
+Disable account selected 
+Please enter bank account holder's name: 
+Valid account holder 
+Please enter the account number: 
+Account number valid 
+Account successfully disabled 
+Logout Successful 
+Select Session Type: Admin or Standard 
+Enter Account Number 
+Enter Account Password 
+Enter Account Holders Name 
+Error: This account is disabled 
+Error: Login failed 
