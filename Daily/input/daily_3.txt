@@ -1,0 +1,8 @@
+Login
+Standard
+00002
+Password123
+Ian
+Deposit
+250.00
+Logout
