@@ -6,6 +6,7 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
+#include <iomanip>
 #include <fstream>
 #include "account.h"
 #include "login.h"
@@ -15,6 +16,7 @@ using namespace std;
 
 class payBill{
     private:
+        string accountNumberString;
         string AccountName;
         int AccountNumber;
         string LoginType; 
@@ -37,10 +39,12 @@ class payBill{
         void setAmount(float amount);
         //set the account balance
         void setBalance(float bal);
-
+      
+      
         //getters
         //get the account name
         string getAccountName();
+       
         //get the account number
         int getAccountNumber();
         //get the loggin type
@@ -54,6 +58,7 @@ class payBill{
         //functions
         void paybill(vector<string> lType,login session);
         void save();
+        void TransactionFile();
 };
 
 #endif

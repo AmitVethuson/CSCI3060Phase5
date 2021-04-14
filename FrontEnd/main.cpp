@@ -51,6 +51,7 @@ int main(int argc, char *argv[]) {
     
     // A string vector that contains the current script's commands
     std::vector<string> testVec = readFile(argv[1]);
+   
 
     // A string vector that contains all the current bank account information from the
     // bank account file: bankAccounts.txt

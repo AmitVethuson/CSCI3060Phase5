@@ -150,8 +150,8 @@ public class BackEnd {
      */
     private static void createCurrentBankAccounts() {
         //Create new current bank accounts file
-        String workingDir = System.getProperty("user.dir");
-        String filepath = workingDir + "\\output\\newCurrentBankAccounts.txt";
+       // String workingDir = System.getProperty("user.dir");
+        String filepath = "newCurrentBankAccounts.txt";
         try {
             new File(filepath);
             FileWriter writer = new FileWriter(filepath);

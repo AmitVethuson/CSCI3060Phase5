@@ -6,6 +6,7 @@
 #include <cstdlib>
 #include <stdlib.h>
 #include <fstream>
+#include <iomanip>
 #include "login.h"
 #include "account.h"
 #include "miscFunctions.h"
@@ -31,6 +32,7 @@ class transfer {
         void setAccountTo(vector<string> lType, login session, string accountNum);
         void setAmount(vector<string> lType, login session, string setAmount);
         void conductTransfer(vector<string> lType, login session);
+        void TransactionFile();
 };
 
 

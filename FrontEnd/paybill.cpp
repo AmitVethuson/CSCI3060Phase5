@@ -17,8 +17,11 @@ using namespace std;
         void payBill:: setAmount(float amount){this->Amount = amount;};
         //set the account balance
         void payBill:: setBalance(float bal){this->Balance = bal;};
+       
+        
 
         //get the account name
+
         string payBill::  getAccountName(){return this->AccountName;};
         //get the account number
         int payBill::getAccountNumber(){return this->AccountNumber;};
@@ -30,6 +33,7 @@ using namespace std;
         float payBill:: getAmount(){return this->Amount;};
         //get the account balance
         float payBill:: getBalance(){return this->Balance;};
+       // string payBill:: getName(){return}
 
 
 
@@ -41,6 +45,17 @@ void payBill::save() {
     else {
         stream << "03_" <<"_"<< getAccountName()<<"_"
                << getAccountNumber()<<"_" << getAmount()<<"_"<< getCompany()<< endl;
+    }
+    stream.close();
+}
+
+void payBill::TransactionFile() {
+    fstream stream;
+    stream.open("transactionFile.txt", ios::out);
+    if (!stream) { exit(1); }
+    else {
+        stream << "03" <<" "<< getAccountName()<< setw(14)<<" "<<setw(5) <<setfill('0')
+               << getAccountNumber()<<" "<<setw(8) <<setfill('0')<<fixed<<setprecision(2)<<getAmount()<<" "<< getCompany()<< endl;
     }
     stream.close();
 }
@@ -140,7 +155,9 @@ void payBill::paybill(vector<string> lType,login session){
             UserChecker =true; 
         }
     }
-     
+
+   setAccountName(standardAccounts[currentAccount].getAccountName());
+   
     if(UserChecker==false){
         cout <<"Error: Account Name not In DataBase"<<endl;
         tChooser(lType,session);
@@ -148,6 +165,7 @@ void payBill::paybill(vector<string> lType,login session){
     //cin >>num;
     //there will be a check if there is the account number in db
     setAccountNumber(num);
+
   
 
     // ask for Company To whom will be paid
@@ -176,6 +194,10 @@ void payBill::paybill(vector<string> lType,login session){
         //if payment is more than $2000.00 exit
         cout <<"Amount: "<<endl; 
         amount =stof(lType[session.updateSessionCounter()]);
+  
+         cout << fixed << setprecision(2);
+        cout <<amount<<endl;
+         
         //cin >>amount;
         //account balance is greater than 0.00 after paying
         if(amount <=2000.00 && (standardAccounts[currentAccount].getBalance()-amount)>=0.00){
@@ -203,6 +225,7 @@ void payBill::paybill(vector<string> lType,login session){
     cout <<"PayBill Succsessfull!"<<endl;
     //save transaction
     save();
+    TransactionFile();
     tChooser(lType,session);
 
     

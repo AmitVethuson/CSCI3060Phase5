@@ -207,7 +207,9 @@ void transfer::conductTransfer(vector<string> lType, login session) {
                 accountFrom->setBalance(accountFromBalance - transferAmount);
                 accountTo->setBalance(accountToBalance + transferAmount);
                 cout << "Transfer successful" << endl;
+               //cout << accountFrom->getAccountNumber()<<endl;
                 saveLogs();
+                TransactionFile();
             }
             else if ((accountFromBalance - transferAmount) < 0.00 && (accountToBalance + transferAmount) >= 0.00) {
                 cout << "Error: Transferring account must have a balance of at least $0.00 after interaction" << endl;
@@ -246,6 +248,21 @@ void transfer::saveLogs() {
                << "02_" << accountTo->getAccountName() << "_"
                << accountTo->getAccountNumber() << "_+" << transferAmount
                << "___" << endl;
+    }
+    stream.close();
+}
+
+
+void transfer::TransactionFile() {
+    fstream stream;
+    stream.open("transactionFiletransefer.txt", ios::out);
+    if (!stream) { exit(1); }
+    else {
+        stream << "02" <<" "<< accountFrom->getAccountName()<< setw(13)<<""<<setw(5) <<setfill('0')
+               << accountFrom->getAccountNumber()<<" "<<setw(8) <<setfill('0')<<fixed<<setprecision(2)<<this->transferAmount<<" "<< endl
+
+               << "02" <<" "<< accountTo->getAccountName()<< setw(14)<<setfill(' ')<<" "<<setw(5) <<setfill('0')
+               << accountTo->getAccountNumber()<<" "<<setw(8) <<setfill('0')<<fixed<<setprecision(2)<<this->transferAmount<<" "<< endl;
     }
     stream.close();
 }
