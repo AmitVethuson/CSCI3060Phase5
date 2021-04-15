@@ -1,12 +1,6 @@
-# 3060Phase5
-To run:\
- -Open the project in intellij\
- -Under the run tab on the top menu, open edit configurations\
- -In the main class field, put type "sample.BackEnd". The BackEnd class contains the main method\
- -In the program arguments field, write the filepaths of a master bank accounts file and a merged transactions file\
- &nbsp;&nbsp;&nbsp;&nbsp;-The path to the master bank accounts file must be written first, followed by the path to the merged transactions file\
- &nbsp;&nbsp;&nbsp;&nbsp;-e.g. "input/oldMasterBankAccounts.txt input/mergedBankAccountTransaction.txt"\
- -Run using intellij
+# 3060Phase6
 
-Test files:\
- The test files are located in the directory /Tests/sample. This directory has the JUnit tests and the results.
+In this phase we were not able use create transaction because none of the group members had a full working front end.
+
+Daily Script: 
+ Inorder to run daily script navigate to the Daily Folder and run sh dailyScript.sh. It will take the input files provided and run it and the outputs are located in DailyOutputs folder
