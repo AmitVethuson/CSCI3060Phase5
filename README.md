@@ -4,3 +4,6 @@ In this phase we were not able use create transaction because none of the group 
 
 Daily Script: 
  Inorder to run daily script navigate to the Daily Folder and run sh dailyScript.sh. It will take the input files provided and run it and the outputs are located in DailyOutputs folder
+
+Weekly Script:
+To run the weekly script, navigate to the Weekly folder and run sh weeklyScript.sh
