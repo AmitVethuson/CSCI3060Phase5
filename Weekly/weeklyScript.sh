@@ -28,4 +28,8 @@ do
     cd ..
 done
 
+#Move final output into the weekly folder for organizational purposes
+cp Daily/BackendComponents/masterBankAccounts.txt Weekly/output
+(cd Weekly/output; mv masterBankAccounts.txt newMasterBankAccounts.txt;)
+
 echo Weekly script complete
