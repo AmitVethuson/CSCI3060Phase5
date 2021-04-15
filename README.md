@@ -1,5 +1,14 @@
 # 3060Phase6
 
+
+FRONT END BELONGED TO GROUP: Vethuson Amit -100695541
+
+STUDENTS PRODUCING BACKEND AND SCRIPT:
+
+Vethuson Amit -100695541
+Ian Reynolds - 100709032
+Sheldon Choo - 100704819
+
 In this phase we were not able use create transaction because none of the group members had a full working front end.
 
 Daily Script: 
